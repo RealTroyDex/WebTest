@@ -9,7 +9,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #000; /* Changed background color to black */
+            background-color: black; /* Set the background color to black */
+            color: white; /* Set the default text color to white */
         }
 
         header {
@@ -20,34 +21,27 @@
         }
 
         nav {
-            background-color: #222; /* Changed nav background color to be different from header */
+            background-color: #444; /* Darker background color for navigation bar */
             overflow: hidden;
-            border-bottom: 1px solid #fff; /* Added border to separate buttons */
         }
 
         nav a {
             float: left;
             display: block;
-            color: #fff; /* Changed text color to white for better contrast */
+            color: #fff; /* Text color for navigation links */
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
             cursor: pointer;
-            border-right: 1px solid #fff; /* Added border to separate buttons */
-        }
-
-        nav a:last-child {
-            border-right: none; /* Remove border for the last button */
+            border-right: 1px solid #666; /* Add a border between navigation links */
         }
 
         nav a:hover {
-            background-color: #ddd;
-            color: #333;
+            background-color: #555; /* Darker background color on hover */
         }
 
         section {
             padding: 20px;
-            color: #fff; /* Changed text color to white for better contrast */
         }
     </style>
 </head>
@@ -64,7 +58,7 @@
 
 <section id="content">
     <h2>Welcome</h2>
-    <p>This is a site bruh.</p>
+    <p>This is a site, bruh.</p>
 </section>
 
 <script>
@@ -88,7 +82,7 @@
     function getDefaultContent() {
         return `
             <h2>Welcome</h2>
-            <p>Bla bla nobody see this.</p>
+            <p>Bla bla nobody sees this.</p>
         `;
     }
 
