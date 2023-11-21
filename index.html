@@ -30,6 +30,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            cursor: pointer;
         }
 
         nav a:hover {
@@ -45,18 +46,31 @@
 <body>
 
 <header>
-    <h1>Testing List</h1>
+    <h1>List Testing</h1>
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#dashboard">Dashboard</a>
+    <a onclick="loadSection('home')">Home</a>
+    <a onclick="loadSection('dashboard')">Dashboard</a>
 </nav>
 
-<section>
+<section id="content">
     <h2>Welcome</h2>
-    <p>Bla bbla lblsaldaadawgwg</p>
+    <p>Bla Bla bla blaadkwoaidjiadjao</p>
 </section>
+
+<script>
+    function loadSection(sectionName) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("content").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", sectionName + ".html", true);
+        xhttp.send();
+    }
+</script>
 
 </body>
 </html>
