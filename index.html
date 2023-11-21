@@ -46,7 +46,7 @@
 <body>
 
 <header>
-    <h1>Testing List</h1>
+    <h1>Testing List Bar</h1>
 </header>
 
 <nav>
@@ -56,7 +56,7 @@
 
 <section id="content">
     <h2>Welcome</h2>
-    <p>LOL</p>
+    <p>This is a site bruh.</p>
 </section>
 
 <script>
@@ -67,9 +67,25 @@
                 document.getElementById("content").innerHTML = this.responseText;
             }
         };
-        xhttp.open("GET", sectionName + ".html", true);
-        xhttp.send();
+
+        // Check if sectionName is 'home'; if not, load the corresponding HTML file
+        if (sectionName === 'home') {
+            document.getElementById("content").innerHTML = getDefaultContent();
+        } else {
+            xhttp.open("GET", sectionName + ".html", true);
+            xhttp.send();
+        }
     }
+
+    function getDefaultContent() {
+        return `
+            <h2>Welcome</h2>
+            <p>Bla bla nobody see this.</p>
+        `;
+    }
+
+    // Load default content on page load
+    loadSection('home');
 </script>
 
 </body>
