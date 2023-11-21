@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #000; /* Changed background color to black */
         }
 
         header {
@@ -19,18 +20,24 @@
         }
 
         nav {
-            background-color: #f2f2f2;
+            background-color: #222; /* Changed nav background color to be different from header */
             overflow: hidden;
+            border-bottom: 1px solid #fff; /* Added border to separate buttons */
         }
 
         nav a {
             float: left;
             display: block;
-            color: #333;
+            color: #fff; /* Changed text color to white for better contrast */
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
             cursor: pointer;
+            border-right: 1px solid #fff; /* Added border to separate buttons */
+        }
+
+        nav a:last-child {
+            border-right: none; /* Remove border for the last button */
         }
 
         nav a:hover {
@@ -40,6 +47,7 @@
 
         section {
             padding: 20px;
+            color: #fff; /* Changed text color to white for better contrast */
         }
     </style>
 </head>
