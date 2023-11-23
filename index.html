@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <script>
+        window.onload = function() {
+            fetch('/register.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("content").innerHTML = data;
+                });
+        };
+    </script>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <div id="content"></div>
+</body>
+</html>
